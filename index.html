@@ -10,9 +10,129 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
-    <title>Document</title>
+    <title>calcolo del prezzo del biglietto del treno</title>
 </head>
 <body>
+    <main class="container-fluid vh-100 text-center bg-success-subtle">
+        <!--input dati utente-->
+        <div class="container-md p-4">
+            <!--calcola prezzo-->
+            <div class="headermain">
+                <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            </div>
+
+            <!--form calcola prezzo-->
+            <div class="bg-light p-3 rounded shadow">
+                <div class="container">
+                    <div class="row my-3 d-flex justify-content-between">
+                        <div class="col-4">
+                            <div class="box">
+                                Nome e Cognome
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="box">
+                                Km da percorerre
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="box">
+                                Fascia d'età
+                            </div>
+                        </div>
+                    </div>
+                    <form class="row my-3 d-flex justify-content-between">
+                        <label for="username" class="col-4">
+                            <input type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Inserisci il tuo nome"
+                            required>
+                        </label>
+                        <label for="km" class="col-4">
+                            <input type="number"
+                            id="Km"
+                            name="km"
+                            placeholder="Km da percorrere"
+                            required>
+                        </label>
+                        <label for="age" class="col-4">
+                            <input type="number"
+                            id="age"
+                            name="age"
+                            placeholder="Inserisci età"
+                            required>
+                        </label>
+                    </form>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <button class="py-1 px-2">Genera</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--output risultato-->
+        <div class="container-md p-4 mt-4">
+            <!--calcola prezzo-->
+            <div class="headermain">
+                <h1>IL TUO BIGLIETTO</h1>
+            </div>
+
+            <!--form calcola prezzo-->
+            <div class="bg-light p-3 shadow">
+                <div class="container">
+                    <div class="row mt-4">
+                        <div class="col text-start">
+                            <div class="box">
+                                <h4>DETTAGLI PASSEGGERI</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row border-top border-bottom border-secondary-subtle">
+                        <div class="col-3 bg-secondary-subtle p-3">
+                            <div class="box">NOME PASSEGGERO</div>
+                            <div class="box">Jon Snow</div>
+                        </div>
+
+                        <div class="col-9">
+                            <div class="row my-4">
+                                <div class="col-3">
+                                    <div class="box">Offerta</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="box">Carrozza</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="box">Codice CP</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="box">Costo Biglietto</div>
+                                </div>
+                            </div>
+
+                            <div class="row my-4">
+                                <div class="col-3">
+                                    <div id="tipoOfferta" class="box">Offerta</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="box">5</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="box">9211</div>
+                                </div>
+                                <div class="col-3">
+                                    <div id="prezzoFinale" class="box">Costo Biglietto €</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <!--link js-->
     <script type="text/javascript" src="js/script.js"></script>
 </body>
