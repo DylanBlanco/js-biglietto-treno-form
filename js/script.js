@@ -1,21 +1,24 @@
+//`click` aggiungi valiori e salva valori
+const infoForm = document.querySelector (`form`);
 
-const button = document.getElementById (`button`);
-
-button.addEventListener (`click`,
-    function() {
+infoForm.addEventListener (`submit`,
+    function(event) {
+        //blocca comportamento di default
+        event.preventDefault();
+        
         //prendi e salva valore username
         const usernameInput = document.getElementById (`username`);
-        console.log (`username:`, username, typeof username);
-        console.log (`username.value:`, username.value, typeof username.value);
+        const username = usernameInput.value;
+        console.log('username:', username, typeof username);
 
         //prendi e salva valore km
         const kmInput = document.getElementById (`km`);
-        console.log (`km percorsi:`, km, typeof km);
-        console.log (`km percorsi.value:`, km.value, typeof km.value);
+        const km = kmInput.value;
+        console.log('km:', km, typeof km);
 
         //prendi e salva valore age
         const ageInput = document.getElementById (`age`);
-        console.log (`age percorsi:`, age, typeof age);
-        console.log (`age percorsi.value:`, age.value, typeof age.value);
+        const age = ageInput.value;
+        console.log('age:', age, typeof age);
     }
 )
