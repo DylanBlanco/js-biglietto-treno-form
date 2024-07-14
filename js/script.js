@@ -26,5 +26,18 @@ infoForm.addEventListener (`submit`,
         let prezzoIntero = km * prezzokm;
         let prezzoFinale = prezzoIntero;
         
+        // calcola prezzo under e over
+        if (age < 18) {
+            prezzoFinale = prezzoIntero * 0.8;
+            console.log('Prezzo Scontato Under 18:', prezzoFinale);
+        } else if (age > 65) {
+            prezzoFinale = prezzoIntero * 0.6;
+            console.log('Prezzo Scontato Over 65:', prezzoFinale);
+        } else {
+            console.log('Prezzo biglietto intero:', prezzoFinale);
+        }
+
+        //stampa prezzo biglietto
+        document.getElementById('prezzoFinale').innerHTML= prezzoFinale.toFixed(2);
     }
 )
