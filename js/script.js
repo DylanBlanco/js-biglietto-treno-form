@@ -20,5 +20,11 @@ infoForm.addEventListener (`submit`,
         const ageInput = document.getElementById (`age`);
         const age = ageInput.value;
         console.log('age:', age, typeof age);
+
+        // prezzo biglietto
+        const prezzokm = 0.21;
+        let prezzoIntero = km * prezzokm;
+        let prezzoFinale = prezzoIntero;
+        
     }
 )
