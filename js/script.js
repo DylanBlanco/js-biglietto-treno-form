@@ -26,10 +26,10 @@ infoForm.addEventListener (`submit`,
         let prezzoIntero = km * prezzokm;
         let prezzoFinale = prezzoIntero;
         // calcola prezzo under e over
-        if (age < 18) {
+        if (age <= 18) {
             prezzoFinale = prezzoIntero * 0.8;
             console.log('Prezzo Scontato Under 18:', prezzoFinale);
-        } else if (age > 65) {
+        } else if (age >= 65) {
             prezzoFinale = prezzoIntero * 0.6;
             console.log('Prezzo Scontato Over 65:', prezzoFinale);
         } else {
@@ -38,13 +38,13 @@ infoForm.addEventListener (`submit`,
 
         //stampa prezzo biglietto
         document.getElementById('prezzoFinale').innerHTML= prezzoFinale.toFixed(2);
-
+        
         //stampa tipo offerta
-        if (prezzoFinale <=18) {
-            document.getElementById('tipoOfferta').innerHTML = `Prezzo scontato under`;
+        if (prezzoFinale <= 18) {
+            document.getElementById('tipoOfferta').innerHTML = `Prezzo scontato under 18`;
         }
-        else if (prezzoFinale >=65) {
-            document.getElementById('tipoOfferta').innerHTML = `Prezzo scontato over`;
+        else if (prezzoFinale >= 65) {
+            document.getElementById('tipoOfferta').innerHTML = `Prezzo scontato over 65`;
         }
         else {
             document.getElementById('tipoOfferta').innerHTML = `Prezzo Intero`;
